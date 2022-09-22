@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+ 
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
+</head>
+ 
+<body>
+<div id="login_frame">
+ 
+    <span style="font-size: 28px;color:white; margin: 50px 0;">用户管理系统</span>
+ 
+    <form method="post" action="js/login.js">
+        <p><label class="label_input">用户名</label><input type="text" id="username" class="input_text"></p>
+        <p><label class="label_input">密码</label><input type="text" id="password" class="input_text"></p>
+ 
+        <div id="login_control">
+            <input type="button" id="btn_login" value="登录" onclick="return login();"/>
+            <script>
+                function login(){
+                    var username=document.getElementById("username").value
+                    var pwd=document.getElementById("password").value
+         
+                    if (username == "") {
+                        alert("请输入用户名")
+                        return;
+                    } else if (pwd == "") {
+                        alert("请输入密码")
+                        return;
+                    }
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('post', 'http://localhost:8080/login')
+                    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+                    xhr.setRequestHeader("Access-Control-Allow-Origin","*")
+                    xhr.send('username=' + username + "&passwd=" + $.md5(pwd))
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var json = eval("("+xhr.responseText+")");
+                            console.log(json.code)
+                            console.log(json.msg)
+                            console.log(json.data)
+                            if (json.code == 0) {
+                                alert("login success.")
+                                window.location.href = "http://localhost:8080/static/index.html?name=" + username
+                                window.event.returnValue = false
+                            } else {
+                                alert("账号或密码错误。")
+                            }
+                        }
+                        // else{
+                        //     alert("other errror。" + xhr.readyState + ' & ' + xhr.status)
+                        // }
+                    }
+                }
+            </script>
+        </div>
+    </form>
+</div>
+ 
+</body>
+</html>
+

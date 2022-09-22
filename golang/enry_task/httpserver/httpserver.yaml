@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  ip: localhost
+rpcserver: # rpc server info
+  addr: localhost:9999
+image: # upload image config
+  prefixurl: http://localhost:8080
+  savepath: upload/images/
+  maxsize: 5 # MB
+logic:
+  tokenexpire: 3600
+pool: # rcp client pool config
+  initsize: 512    # init size
+  capacity: 1024   # max size
+  maxidle: 120    # connection max idle time (second)
+  gettimeout: 120  # max time when try to fetch connection (ms)

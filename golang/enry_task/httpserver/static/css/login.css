@@ -1,0 +1,59 @@
+#login_frame {
+    width: 400px;
+    height: 220px;
+    padding: 13px;
+ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+ 
+    background-color: blue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.label_input {
+    font-size: 20px;
+    font-family: 宋体;
+ 
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display:inline-block;  /*  https://blog.csdn.net/dyr_1203/article/details/74942828 */
+ 
+    color: white;
+    background-color: #053a47;
+    padding-top: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ 
+#btn_login { 
+    font-size: 20px;
+    font-family: 宋体;
+ 
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    padding-top: 5px;
+    color: white;
+    background-color:#053a47;
+    border-radius: 6px;
+    border: 0;
+ 
+    float: center;
+}
+
+.input_text {
+    width: 280px;
+    height: 30px;
+    padding-top: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}

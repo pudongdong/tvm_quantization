@@ -1,0 +1,8 @@
+/logs/*.log
+/httpserver/httpserver
+/httpserver/*.log
+/logs
+/tcpserver/tcpserver
+/httpserver/*.log
+/tcpserver/*.log
+/initdb

@@ -1,0 +1,102 @@
+#user_frame {
+    width: 360px;
+    padding: 13px;
+ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+ 
+    background-color: blue;
+ 
+    border-radius: 10px;
+    text-align: center;
+}
+ 
+
+.label_input {
+    font-size: 20px;
+    font-family: 宋体;
+    
+    width: 100px;
+    display:inline-block;  /*  https://blog.csdn.net/dyr_1203/article/details/74942828 */
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 5px;
+ 
+    color: white;
+    background-color: #053a47;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#btn_edit {
+    font-size: 18px;
+    font-family: 宋体;
+    width: 150px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #053a47;
+    border-radius: 6px;
+    border: 0;
+    padding-top: 5px;
+ 
+    float: center;
+}
+
+
+#btn_logout {
+    font-size: 18px;
+    font-family: 宋体;
+ 
+    width: 150px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #053a47;
+    border-radius: 6px;
+    border: 0;
+    /* display: inline-block; */
+    /* padding-top: 5px; */
+ 
+    float: center; 
+}
+
+#btn_upload {
+    font-size: 18px;
+    font-family: 宋体;
+    width: 150px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #053a47;
+    border-radius: 6px;
+    border: 0;
+    padding-top: 5px;
+ 
+    float: center;
+}
+
+
+
+.input_text {
+    width: 180px;
+    height: 25px;
+    padding-top: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+
+.button_text {
+    /* display: block; */
+    padding-top: 5px;
+    line-height: 30px;
+}
+
